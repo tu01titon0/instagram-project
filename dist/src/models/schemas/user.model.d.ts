@@ -39,7 +39,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;
@@ -59,7 +58,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;
@@ -79,7 +77,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;
@@ -101,7 +98,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;
@@ -121,7 +117,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;
@@ -141,7 +136,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    className?: string;
     avatarUrl?: string;
     bio?: string;
     gender?: string;

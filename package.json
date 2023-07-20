@@ -12,7 +12,9 @@
   "devDependencies": {
     "@types/connect-flash": "^0.0.37",
     "@types/connect-livereload": "^0.6.0",
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
     "@types/mongoose": "^5.11.97",
     "@types/multer": "^1.4.7",
     "@types/passport": "^1.0.12",
@@ -28,6 +30,7 @@
     "body-parser": "^1.20.2",
     "connect-flash": "^0.1.1",
     "connect-livereload": "^0.6.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "exceljs": "^4.3.0",

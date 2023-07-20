@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const body_parser_1 = __importDefault(require("body-parser"));
+require("dotenv/config");
 const ConnectDB_1 = require("./src/models/ConnectDB");
 const passport_1 = __importDefault(require("passport"));
 const app = express();

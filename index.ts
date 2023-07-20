@@ -1,5 +1,6 @@
 import express = require("express");
 import bodyParser from "body-parser";
+import "dotenv/config";
 import { ConnectDB } from "./src/models/ConnectDB";
 import passport from "passport";
 const app = express();
@@ -14,7 +15,6 @@ db.connect()
   .catch((err) => {
     console.log(err.message);
   });
-
 
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));

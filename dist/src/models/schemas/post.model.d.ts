@@ -30,8 +30,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
     comments: {
@@ -40,8 +40,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 }> & {
     comments: {
@@ -50,8 +50,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
@@ -62,8 +62,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 }, import("mongoose").Document<unknown, {}, {
     comments: {
@@ -72,8 +72,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 }> & {
     comments: {
@@ -82,8 +82,8 @@ declare const Post: import("mongoose").Model<{
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
     createAt?: Date;
+    description?: string;
     imgUrl?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;

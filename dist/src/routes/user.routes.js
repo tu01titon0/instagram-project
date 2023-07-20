@@ -9,5 +9,6 @@ const userRoute = (0, express_1.Router)();
 const multer = require("multer");
 const upload = multer();
 userRoute.post("/user/create", upload.none(), user_controller_1.default.createUser);
+userRoute.post("/user", upload.none(), user_controller_1.default.getUser);
 exports.default = userRoute;
 //# sourceMappingURL=user.routes.js.map

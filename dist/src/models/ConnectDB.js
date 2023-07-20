@@ -7,7 +7,7 @@ exports.ConnectDB = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 class ConnectDB {
     async connect() {
-        return await mongoose_1.default.connect('mongodb+srv://nguyenmanhtu09042000:tomtiton01@cluster0.qhm1edm.mongodb.net/instagram');
+        return await mongoose_1.default.connect('mongodb+srv://vanvn:q8jqeRjWkg9hcSOl@module4instagram.wjqzker.mongodb.net/');
     }
 }
 exports.ConnectDB = ConnectDB;

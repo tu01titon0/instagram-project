@@ -8,7 +8,6 @@ const port = process.env.PORT || 3000;
 import session from "express-session";
 const db = new ConnectDB();
 import cors from "cors";
-
 import userRoute from "./src/routes/user.routes";
 
 db.connect()
@@ -24,6 +23,9 @@ app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
+
+
+
 
 app.use("/api", userRoute);
 

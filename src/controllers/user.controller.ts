@@ -1,4 +1,5 @@
 import User from "../models/schemas/user.model";
+import bcrypt from "bcrypt";
 
 export default class UserController {
   static async createUser(req: any, res: any) {
@@ -9,7 +10,13 @@ export default class UserController {
           message: `Đã tồn tại người dùng với tên đăng nhập ${req.body.userName} !`,
         });
       } else {
-        const user = new User(req.body);
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        const user = new User({
+          userName: req.body.userName,
+          fullName: req.body.fullName,
+          gender: req.body.gender,
+          password: hashedPassword,
+        });
         res.json({
           status: "ok",
         });
@@ -23,12 +30,16 @@ export default class UserController {
   static async getUser(req: any, res: any) {
     try {
       const user = await User.findOne({ userName: req.body.userName });
+      const checkPassword = await bcrypt.compare(
+        req.body.password,
+        user.password
+      );
       if (!user) {
         return res.json({
           message: `Không tồn tại người dùng ${req.body.userName} !`,
         });
       } else {
-        if (user.password === req.body.password) {
+        if (checkPassword) {
           return res.json({});
         } else {
           return res.json({

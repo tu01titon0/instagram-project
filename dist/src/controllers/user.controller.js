@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_model_1 = __importDefault(require("../models/schemas/user.model"));
+const bcrypt_1 = __importDefault(require("bcrypt"));
 class UserController {
     static async createUser(req, res) {
         try {
@@ -14,7 +15,13 @@ class UserController {
                 });
             }
             else {
-                const user = new user_model_1.default(req.body);
+                const hashedPassword = await bcrypt_1.default.hash(req.body.password, 10);
+                const user = new user_model_1.default({
+                    userName: req.body.userName,
+                    fullName: req.body.fullName,
+                    gender: req.body.gender,
+                    password: hashedPassword,
+                });
                 res.json({
                     status: "ok",
                 });
@@ -28,13 +35,15 @@ class UserController {
     static async getUser(req, res) {
         try {
             const user = await user_model_1.default.findOne({ userName: req.body.userName });
+            const checkPassword = await bcrypt_1.default.compare(req.body.password, user.password);
+            console.log(checkPassword);
             if (!user) {
                 return res.json({
                     message: `Không tồn tại người dùng ${req.body.userName} !`,
                 });
             }
             else {
-                if (user.password === req.body.password) {
+                if (checkPassword) {
                     return res.json({});
                 }
                 else {

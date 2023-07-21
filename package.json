@@ -45,6 +45,7 @@
     "firebase-tools": "^0.1.6",
     "jquery": "^3.7.0",
     "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.1",
     "livereload": "^0.9.3",
     "livereload-js": "^4.0.1",
     "moment-timezone": "^0.5.43",

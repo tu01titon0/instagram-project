@@ -1,5 +1,7 @@
 import User from "../models/schemas/user.model";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import JWTConfig from "../config/jwt.config";
 
 export default class UserController {
   static async createUser(req: any, res: any) {
@@ -40,7 +42,11 @@ export default class UserController {
         });
       } else {
         if (checkPassword) {
-          return res.json({});
+          const payload = {
+            userName: req.body.userName,
+          };
+          const accessToken = jwt.sign(payload, JWTConfig.accessTokenSecret);
+          return res.json({ accessToken });
         } else {
           return res.json({
             message: "Mật khẩu nhập vào không chính xác !",

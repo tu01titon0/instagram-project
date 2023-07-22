@@ -37,13 +37,13 @@ class UserController {
     static async getUser(req, res) {
         try {
             const user = await user_model_1.default.findOne({ userName: req.body.userName });
-            const checkPassword = await bcrypt_1.default.compare(req.body.password, user.password);
             if (!user) {
                 return res.json({
                     message: `Không tồn tại người dùng ${req.body.userName} !`,
                 });
             }
             else {
+                const checkPassword = await bcrypt_1.default.compare(req.body.password, user.password);
                 if (checkPassword) {
                     const payload = {
                         userName: req.body.userName,

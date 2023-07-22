@@ -1,13 +1,9 @@
 import User from "../models/schemas/user.model";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import JWTConfig from "../config/jwt.config";
+import userRoute from "src/routes/user.routes";
 
 export default class UserController {
-  static createToken = (_id) => {
-    return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "1d" });
-  };
-
   static async createUser(req: any, res: any) {
     try {
       const userCheck = await User.find({ userName: req.body.userName });
@@ -49,8 +45,15 @@ export default class UserController {
           const payload = {
             userName: req.body.userName,
           };
-          const accessToken = jwt.sign(payload, JWTConfig.accessTokenSecret);
-          return res.json({ accessToken, user });
+          const accessToken = jwt.sign(payload, process.env.SECRET);
+          const userData = {
+            _id: user._id,
+            userName: user.userName,
+            fullName: user.fullName,
+            avatarUrl: user.avatarUrl,
+          };
+
+          return res.json({ accessToken, userData });
         } else {
           return res.json({
             message: "Mật khẩu nhập vào không chính xác !",

@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_model_1 = __importDefault(require("../models/schemas/user.model"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const jwt_config_1 = __importDefault(require("../config/jwt.config"));
 class UserController {
     static async createUser(req, res) {
         try {
@@ -43,7 +45,11 @@ class UserController {
             }
             else {
                 if (checkPassword) {
-                    return res.json({});
+                    const payload = {
+                        userName: req.body.userName,
+                    };
+                    const accessToken = jsonwebtoken_1.default.sign(payload, jwt_config_1.default.accessTokenSecret);
+                    return res.json({ accessToken, user });
                 }
                 else {
                     return res.json({
@@ -57,5 +63,8 @@ class UserController {
         }
     }
 }
+UserController.createToken = (_id) => {
+    return jsonwebtoken_1.default.sign({ _id }, process.env.SECRET, { expiresIn: "1d" });
+};
 exports.default = UserController;
 //# sourceMappingURL=user.controller.js.map

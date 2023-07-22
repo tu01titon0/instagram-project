@@ -4,6 +4,10 @@ import jwt from "jsonwebtoken";
 import JWTConfig from "../config/jwt.config";
 
 export default class UserController {
+  static createToken = (_id) => {
+    return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "1d" });
+  };
+
   static async createUser(req: any, res: any) {
     try {
       const userCheck = await User.find({ userName: req.body.userName });
@@ -46,7 +50,7 @@ export default class UserController {
             userName: req.body.userName,
           };
           const accessToken = jwt.sign(payload, JWTConfig.accessTokenSecret);
-          return res.json({ accessToken });
+          return res.json({ accessToken, user });
         } else {
           return res.json({
             message: "Mật khẩu nhập vào không chính xác !",

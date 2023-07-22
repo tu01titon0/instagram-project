@@ -24,7 +24,11 @@
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
 export default class UserController {
+    static createToken: (_id: any) => string;
     static createUser(req: any, res: any): Promise<import("mongoose").Document<unknown, {}, {
+        avatarUrl: string;
+        bio: string;
+        gender: string;
         posts: {
             post?: import("mongoose").Types.ObjectId;
         }[];
@@ -40,10 +44,10 @@ export default class UserController {
         userName?: string;
         fullName?: string;
         password?: string;
-        avatarUrl?: string;
-        bio?: string;
-        gender?: string;
     }> & {
+        avatarUrl: string;
+        bio: string;
+        gender: string;
         posts: {
             post?: import("mongoose").Types.ObjectId;
         }[];
@@ -59,9 +63,6 @@ export default class UserController {
         userName?: string;
         fullName?: string;
         password?: string;
-        avatarUrl?: string;
-        bio?: string;
-        gender?: string;
     } & {
         _id: import("mongoose").Types.ObjectId;
     }>;

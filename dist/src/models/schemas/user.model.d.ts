@@ -24,6 +24,9 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 declare const User: import("mongoose").Model<{
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -39,10 +42,10 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -58,10 +61,10 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 }> & {
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -77,12 +80,12 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -98,10 +101,10 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 }, import("mongoose").Document<unknown, {}, {
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -117,10 +120,10 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 }> & {
+    avatarUrl: string;
+    bio: string;
+    gender: string;
     posts: {
         post?: import("mongoose").Types.ObjectId;
     }[];
@@ -136,9 +139,6 @@ declare const User: import("mongoose").Model<{
     userName?: string;
     fullName?: string;
     password?: string;
-    avatarUrl?: string;
-    bio?: string;
-    gender?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }>>;

@@ -9,5 +9,6 @@ const postRoute = (0, express_1.Router)();
 const multer = require("multer");
 const upload = multer();
 postRoute.post("/create", upload.none(), post_controller_1.default.createPost);
+postRoute.get("/", post_controller_1.default.getAllPosts);
 exports.default = postRoute;
 //# sourceMappingURL=post.router.js.map

@@ -21,10 +21,16 @@ class PostController {
         else {
             const { description, createAt, imgUrl } = req.body;
             const post = new post_model_1.default({ description, createAt, imgUrl });
+            post.user = user._id;
             await post.save();
             user.posts.push({ post: post._id });
             await user.save();
         }
+    }
+    static async getAllPosts(req, res) {
+        const user = await user_model_1.default.findOne({ _id: req.body.user_id });
+        const posts = await post_model_1.default.find().populate('user');
+        res.json({ posts: posts });
     }
 }
 exports.default = PostController;

@@ -15,6 +15,10 @@ const postSchema = new mongoose_1.Schema({
             user: { type: mongoose_1.Schema.Types.ObjectId, ref: "user" },
         },
     ],
+    user: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "user",
+    },
 });
 const Post = (0, mongoose_1.model)("post", postSchema);
 exports.default = Post;

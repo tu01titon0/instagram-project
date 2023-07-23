@@ -66,4 +66,5 @@ export default class UserController {
         _id: import("mongoose").Types.ObjectId;
     }>;
     static getUser(req: any, res: any): Promise<any>;
+    static getUserInfo(req: any, res: any): Promise<void>;
 }

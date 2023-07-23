@@ -67,6 +67,20 @@ class UserController {
             console.log(err.message);
         }
     }
+    static async getUserInfo(req, res) {
+        try {
+            const user = await user_model_1.default.findById({ _id: req.body._id });
+            if (!user) {
+                res.json({ message: "Người dùng không tồn tại!" });
+            }
+            else {
+                res.json({ user: user });
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    }
 }
 exports.default = UserController;
 //# sourceMappingURL=user.controller.js.map

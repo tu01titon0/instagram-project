@@ -1,7 +1,6 @@
 import User from "../models/schemas/user.model";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import userRoute from "src/routes/user.routes";
 
 export default class UserController {
   static async createUser(req: any, res: any) {
@@ -59,6 +58,19 @@ export default class UserController {
             message: "Mật khẩu nhập vào không chính xác !",
           });
         }
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+
+  static async getUserInfo(req: any, res: any) {
+    try {
+      const user = await User.findById({ _id: req.body._id });
+      if (!user) {
+        res.json({ message: "Người dùng không tồn tại!" });
+      } else {
+        res.json({ user: user });
       }
     } catch (err) {
       console.log(err.message);

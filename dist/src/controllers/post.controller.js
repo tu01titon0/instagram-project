@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_model_1 = __importDefault(require("../models/schemas/user.model"));
+const post_model_1 = __importDefault(require("../models/schemas/post.model"));
 class PostController {
     static async createPost(req, res) {
         const user = await user_model_1.default.findOne({ _id: req.body.user_id });
@@ -18,7 +19,11 @@ class PostController {
             });
         }
         else {
-            res.json({ message: null });
+            const { description, createAt, imgUrl } = req.body;
+            const post = new post_model_1.default({ description, createAt, imgUrl });
+            await post.save();
+            user.posts.push({ post: post._id });
+            await user.save();
         }
     }
 }

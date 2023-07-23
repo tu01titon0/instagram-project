@@ -1,4 +1,5 @@
 import User from "../models/schemas/user.model";
+import Post from "../models/schemas/post.model";
 
 export default class PostController {
   static async createPost(req: any, res: any) {
@@ -13,7 +14,11 @@ export default class PostController {
         message: "Đây là dịch vụ chia sẻ ảnh, hãy vui lòng đăng tải ảnh !",
       });
     } else {
-      res.json({ message: null });
+      const { description, createAt, imgUrl } = req.body;
+      const post = new Post({ description, createAt, imgUrl });
+      await post.save();
+      user.posts.push({ post: post._id });
+      await user.save();
     }
   }
 }

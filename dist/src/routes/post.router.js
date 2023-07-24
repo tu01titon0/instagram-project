@@ -10,5 +10,6 @@ const multer = require("multer");
 const upload = multer();
 postRoute.post("/create", upload.none(), post_controller_1.default.createPost);
 postRoute.get("/", post_controller_1.default.getAllPosts);
+postRoute.post("/p/:id", post_controller_1.default.getPostDetail);
 exports.default = postRoute;
 //# sourceMappingURL=post.router.js.map

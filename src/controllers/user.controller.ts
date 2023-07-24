@@ -104,11 +104,9 @@ export default class UserController {
         "posts.post"
       );
 
-      console.log(user);
-
       if (user) {
         const data = user.posts.reverse();
-        res.json({ posts: data });
+        res.json({ posts: data, user: user });
       } else {
         res.json({ message: "User không tồn tại!" });
       }

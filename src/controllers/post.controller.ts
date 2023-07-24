@@ -29,4 +29,9 @@ export default class PostController {
     const data = posts.reverse();
     res.json({ posts: data });
   }
+
+  static async getPostDetail(req: any, res: any) {
+    const post = await Post.findById(req.params.id).populate("user");
+    res.json({ post });
+  }
 }

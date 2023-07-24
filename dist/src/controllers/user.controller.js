@@ -96,10 +96,9 @@ class UserController {
     static async getPostsFromUser(req, res) {
         try {
             const user = await user_model_1.default.findOne({ userName: req.params.id }).populate("posts.post");
-            console.log(user);
             if (user) {
                 const data = user.posts.reverse();
-                res.json({ posts: data });
+                res.json({ posts: data, user: user });
             }
             else {
                 res.json({ message: "User không tồn tại!" });

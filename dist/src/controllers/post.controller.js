@@ -33,6 +33,10 @@ class PostController {
         const data = posts.reverse();
         res.json({ posts: data });
     }
+    static async getPostDetail(req, res) {
+        const post = await post_model_1.default.findById(req.params.id).populate("user");
+        res.json({ post });
+    }
 }
 exports.default = PostController;
 //# sourceMappingURL=post.controller.js.map

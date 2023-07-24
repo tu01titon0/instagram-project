@@ -19,8 +19,8 @@ class PostController {
             });
         }
         else {
-            const { description, imgUrl } = req.body;
-            const post = new post_model_1.default({ description, imgUrl });
+            const { description, createAt, imgUrl } = req.body;
+            const post = new post_model_1.default({ description, createAt, imgUrl });
             post.user = user._id;
             await post.save();
             user.posts.push({ post: post._id });

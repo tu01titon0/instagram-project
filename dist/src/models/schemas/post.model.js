@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const postSchema = new mongoose_1.Schema({
     description: { type: String, default: "" },
-    createAt: { type: Date, default: Date() },
+    createAt: { type: Date, default: Date.now() },
     imgUrl: String,
     comments: [
         {

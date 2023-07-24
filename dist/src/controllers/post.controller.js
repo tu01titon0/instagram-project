@@ -37,8 +37,38 @@ class PostController {
         res.json({ posts: data });
     }
     static async getPostDetail(req, res) {
-        const post = await post_model_1.default.findById(req.params.id).populate("user");
+        const post = await post_model_1.default.findById(req.params.id)
+            .populate("user")
+            .populate("comments.postedBy");
         res.json({ post });
+    }
+    static async postComment(req, res) {
+        try {
+            const { user, comment } = req.body;
+            const post = await post_model_1.default.findOne({ _id: req.params.id });
+            const userPosted = await user_model_1.default.findOne({ _id: user._id });
+            if (comment.length < 1) {
+                res.json({ message: "Vui lòng nhập nội dung!" });
+            }
+            else if (post && userPosted) {
+                await post_model_1.default.findByIdAndUpdate(req.params.id, {
+                    $push: {
+                        comments: {
+                            comment: comment,
+                            postedBy: user._id,
+                        },
+                    },
+                }, { new: true });
+                const fePost = await post_model_1.default.findById(req.params.id).populate("comments.postedBy");
+                return res.json({ data: fePost.comments });
+            }
+            else {
+                res.json({ message: "Người dùng hoặc bài viết không tồn tại!" });
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
     }
 }
 exports.default = PostController;

@@ -11,5 +11,6 @@ const upload = multer();
 postRoute.post("/create", upload.none(), post_controller_1.default.createPost);
 postRoute.get("/", post_controller_1.default.getAllPosts);
 postRoute.post("/p/:id", post_controller_1.default.getPostDetail);
+postRoute.post("/comment/:id", post_controller_1.default.postComment);
 exports.default = postRoute;
 //# sourceMappingURL=post.router.js.map

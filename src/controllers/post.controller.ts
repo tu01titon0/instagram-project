@@ -21,7 +21,7 @@ export default class PostController {
       user.posts.push({ post: post._id });
       await user.save();
       res.json({
-        post: await Post.findOne({_id: post._id}).populate("user"),
+        post: await Post.findOne({ _id: post._id }).populate("user"),
       });
     }
   }
@@ -34,7 +34,43 @@ export default class PostController {
   }
 
   static async getPostDetail(req: any, res: any) {
-    const post = await Post.findById(req.params.id).populate("user");
+    const post = await Post.findById(req.params.id)
+      .populate("user")
+      .populate("comments.postedBy");
     res.json({ post });
+  }
+
+  static async postComment(req: any, res: any) {
+    try {
+      const { user, comment } = req.body;
+      const post = await Post.findOne({ _id: req.params.id });
+      const userPosted = await User.findOne({ _id: user._id });
+
+      if (comment.length < 1) {
+        res.json({ message: "Vui lòng nhập nội dung!" });
+      } else if (post && userPosted) {
+        await Post.findByIdAndUpdate(
+          req.params.id,
+          {
+            $push: {
+              comments: {
+                comment: comment,
+                postedBy: user._id,
+              },
+            },
+          },
+          { new: true }
+        );
+
+        const fePost = await Post.findById(req.params.id).populate(
+          "comments.postedBy"
+        );
+        return res.json({ data: fePost.comments });
+      } else {
+        res.json({ message: "Người dùng hoặc bài viết không tồn tại!" });
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
   }
 }

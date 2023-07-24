@@ -2,11 +2,13 @@ import { Schema, model } from "mongoose";
 
 const postSchema = new Schema({
   description: { type: String, default: "" },
-  createAt: { type: Date, default: Date.now() },
+  createAt: { type: Date, default: new Date().toDateString() },
   imgUrl: String,
   comments: [
     {
-      comment: { type: Schema.Types.ObjectId, ref: "comment" },
+      comment: String,
+      created: { type: Date, default: new Date().toDateString() },
+      postedBy: { type: Schema.Types.ObjectId, ref: "user" },
     },
   ],
   likes: [
@@ -18,7 +20,6 @@ const postSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "user",
   },
-
 });
 
 const Post = model("post", postSchema);

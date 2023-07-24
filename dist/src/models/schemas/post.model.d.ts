@@ -24,67 +24,73 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 declare const Post: import("mongoose").Model<{
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 }> & {
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 }, import("mongoose").Document<unknown, {}, {
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 }> & {
+    description: string;
+    createAt: Date;
     comments: {
         comment?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    description?: string;
-    createAt?: Date;
     imgUrl?: string;
+    user?: import("mongoose").Types.ObjectId;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }>>;

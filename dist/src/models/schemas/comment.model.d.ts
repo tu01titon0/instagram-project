@@ -27,40 +27,40 @@ declare const Comment: import("mongoose").Model<{
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 }> & {
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 }, import("mongoose").Document<unknown, {}, {
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 }> & {
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    content?: string;
     createAt?: Date;
+    content?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }>>;

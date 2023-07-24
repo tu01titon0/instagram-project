@@ -24,7 +24,6 @@
 /// <reference types="mongoose" />
 /// <reference types="mongoose/types/inferschematype" />
 export default class UserController {
-    static createToken: (_id: any) => string;
     static createUser(req: any, res: any): Promise<import("mongoose").Document<unknown, {}, {
         avatarUrl: string;
         bio: string;
@@ -67,4 +66,6 @@ export default class UserController {
         _id: import("mongoose").Types.ObjectId;
     }>;
     static getUser(req: any, res: any): Promise<any>;
+    static getUserInfo(req: any, res: any): Promise<void>;
+    static updateUser(req: any, res: any): Promise<import("mongoose").UpdateWriteOpResult>;
 }

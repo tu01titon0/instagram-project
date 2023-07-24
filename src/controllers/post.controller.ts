@@ -14,8 +14,8 @@ export default class PostController {
         message: "Đây là dịch vụ chia sẻ ảnh, hãy vui lòng đăng tải ảnh !",
       });
     } else {
-      const { description, createAt, imgUrl } = req.body;
-      const post = new Post({ description, createAt, imgUrl });
+      const { description, imgUrl } = req.body;
+      const post = new Post({ description, imgUrl });
       post.user = user._id;
       await post.save();
       user.posts.push({ post: post._id });

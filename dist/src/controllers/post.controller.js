@@ -25,6 +25,9 @@ class PostController {
             await post.save();
             user.posts.push({ post: post._id });
             await user.save();
+            res.json({
+                post: await post_model_1.default.findOne({ _id: post._id }).populate("user"),
+            });
         }
     }
     static async getAllPosts(req, res) {

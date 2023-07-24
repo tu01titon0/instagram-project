@@ -29,8 +29,9 @@ class PostController {
     }
     static async getAllPosts(req, res) {
         const user = await user_model_1.default.findOne({ _id: req.body.user_id });
-        const posts = await post_model_1.default.find().populate("user").sort({ createAt: -1 });
-        res.json({ posts: posts });
+        const posts = await post_model_1.default.find().populate("user");
+        const data = posts.reverse();
+        res.json({ posts: data });
     }
 }
 exports.default = PostController;

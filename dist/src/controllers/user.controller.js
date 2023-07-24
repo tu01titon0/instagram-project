@@ -53,6 +53,8 @@ class UserController {
                         userName: user.userName,
                         fullName: user.fullName,
                         avatarUrl: user.avatarUrl,
+                        bio: user.bio,
+                        gender: user.gender,
                     };
                     return res.json({ accessToken, userData });
                 }
@@ -80,6 +82,16 @@ class UserController {
         catch (err) {
             console.log(err.message);
         }
+    }
+    static async updateUser(req, res) {
+        const hashedPassword = await bcrypt_1.default.hash(req.body.password, 10);
+        const user = await user_model_1.default.findOne({ _id: req.body.userId });
+        if (!user) {
+            res.json({ message: "User không tồn tại!" });
+        }
+        return await user_model_1.default.updateOne({ _id: req.body.userId }, {
+            $set: Object.assign(Object.assign(Object.assign(Object.assign({}, (req.body.bio && { bio: req.body.bio })), (req.body.avatarUrl && { avatarUrl: req.body.avatarUrl })), (req.body.gender && { gender: req.body.gender })), (req.body.password && { password: hashedPassword })),
+        });
     }
 }
 exports.default = UserController;

@@ -42,7 +42,7 @@
     "fast-csv": "^4.3.6",
     "firebase": "^8.6.8",
     "firebase-admin": "^11.9.0",
-    "firebase-tools": "^0.1.6",
+    "firebase-tools": "^12.4.5",
     "jquery": "^3.7.0",
     "json2csv": "^6.0.0-alpha.2",
     "jsonwebtoken": "^9.0.1",

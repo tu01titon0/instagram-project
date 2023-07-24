@@ -20,6 +20,9 @@ export default class PostController {
       await post.save();
       user.posts.push({ post: post._id });
       await user.save();
+      res.json({
+        post: await Post.findOne({_id: post._id}).populate("user"),
+      });
     }
   }
 

@@ -6,5 +6,6 @@ const upload = multer();
 
 postRoute.post("/create", upload.none(), PostController.createPost);
 postRoute.get("/", PostController.getAllPosts);
+postRoute.post("/p/:id", PostController.getPostDetail);
 
 export default postRoute;

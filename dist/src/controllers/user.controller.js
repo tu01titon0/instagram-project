@@ -93,6 +93,22 @@ class UserController {
             $set: Object.assign(Object.assign(Object.assign(Object.assign({}, (req.body.bio && { bio: req.body.bio })), (req.body.avatarUrl && { avatarUrl: req.body.avatarUrl })), (req.body.gender && { gender: req.body.gender })), (req.body.password && { password: hashedPassword })),
         });
     }
+    static async getPostsFromUser(req, res) {
+        try {
+            const user = await user_model_1.default.findOne({ userName: req.params.id }).populate("posts.post");
+            console.log(user);
+            if (user) {
+                const data = user.posts.reverse();
+                res.json({ posts: data });
+            }
+            else {
+                res.json({ message: "User không tồn tại!" });
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    }
 }
 exports.default = UserController;
 //# sourceMappingURL=user.controller.js.map

@@ -11,6 +11,7 @@ const upload = multer();
 userRoute.post("/user/create", upload.none(), user_controller_1.default.createUser);
 userRoute.post("/user/info", upload.none(), user_controller_1.default.getUserInfo);
 userRoute.post("/user/update", upload.none(), user_controller_1.default.updateUser);
+userRoute.post("/user/:id", user_controller_1.default.getPostsFromUser);
 userRoute.post("/user", upload.none(), user_controller_1.default.getUser);
 exports.default = userRoute;
 //# sourceMappingURL=user.routes.js.map

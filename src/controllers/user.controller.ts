@@ -97,4 +97,23 @@ export default class UserController {
       }
     );
   }
+
+  static async getPostsFromUser(req: any, res: any) {
+    try {
+      const user = await User.findOne({ userName: req.params.id }).populate(
+        "posts.post"
+      );
+
+      console.log(user);
+
+      if (user) {
+        const data = user.posts.reverse();
+        res.json({ posts: data });
+      } else {
+        res.json({ message: "User không tồn tại!" });
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 }

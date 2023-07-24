@@ -5,6 +5,7 @@ import multer = require("multer");
 const upload = multer();
 
 postRoute.post("/create", upload.none(), PostController.createPost);
+postRoute.post("/like-post", PostController.likeOrUnlike);
 postRoute.get("/", PostController.getAllPosts);
 postRoute.post("/p/:id", PostController.getPostDetail);
 postRoute.post("/comment/:id", PostController.postComment);

@@ -9,6 +9,7 @@ const postRoute = (0, express_1.Router)();
 const multer = require("multer");
 const upload = multer();
 postRoute.post("/create", upload.none(), post_controller_1.default.createPost);
+postRoute.post("/like-post", post_controller_1.default.likeOrUnlike);
 postRoute.get("/", post_controller_1.default.getAllPosts);
 postRoute.post("/p/:id", post_controller_1.default.getPostDetail);
 postRoute.post("/comment/:id", post_controller_1.default.postComment);

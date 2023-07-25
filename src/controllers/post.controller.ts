@@ -3,12 +3,12 @@ import Post from "../models/schemas/post.model";
 
 export default class PostController {
   static async createPost(req: any, res: any) {
-    try{
+    try {
       const user = await User.findOne({ _id: req.body.user_id });
       if (!user) {
         res.json({
           message:
-              "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
+            "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
         });
       } else if (!req.body.imgUrl) {
         res.json({
@@ -25,7 +25,7 @@ export default class PostController {
           post: await Post.findOne({ _id: post._id }).populate("user"),
         });
       }
-    } catch (e){
+    } catch (e) {
       console.log(e.message);
     }
   }
@@ -77,60 +77,72 @@ export default class PostController {
     }
   }
 
-  static async likeOrUnlike(req: any, res: any){
+  static async likeOrUnlike(req: any, res: any) {
     try {
-        const user = await User.findOne({ _id: req.body.user_id });
-        const post = await Post.findOne({ _id: req.body.postId }).populate("likes");
-        let message
-        if(user && post){
-          const hasLiked = post.likes.some((like) => like.user._id.toString() === user._id.toString());
-          if (hasLiked) {
-            post.likes = post.likes.filter((like) => like.user._id.toString() !== user._id.toString());
-            message = 'unlike'
-          } else {
-            post.likes.push({ user: user._id });
-            message = "like"
-          }
-          await post.save()
-          const newPost = await Post.findOne({ _id: post._id }).populate("user")
-          res.json({
-            message: message,
-            post: newPost,
-          })
+      const user = await User.findOne({ _id: req.body.user_id });
+      const post = await Post.findOne({ _id: req.body.postId }).populate(
+        "likes"
+      );
+      let message;
+      if (user && post) {
+        const hasLiked = post.likes.some(
+          (like) => like.user._id.toString() === user._id.toString()
+        );
+        if (hasLiked) {
+          post.likes = post.likes.filter(
+            (like) => like.user._id.toString() !== user._id.toString()
+          );
+          message = "unlike";
         } else {
-          res.json({
-            message:
-                "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
-          });
+          post.likes.push({ user: user._id });
+          message = "like";
         }
+        await post.save();
+        const newPost = await Post.findOne({ _id: post._id }).populate("user");
+        res.json({
+          message: message,
+          post: newPost,
+        });
+      } else {
+        res.json({
+          message:
+            "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
+        });
+      }
     } catch (err) {
       console.log(err.message);
     }
   }
-  static async savePost(req: any, res: any){
+  static async savePost(req: any, res: any) {
     try {
       const user = await User.findOne({ _id: req.body.user_id });
-      const post = await Post.findOne({ _id: req.body.postId }).populate("likes");
-      let message
-      if(user && post){
-        const hasSaved = post.saved.some((save) => save.user._id.toString() === user._id.toString());
+      const post = await Post.findOne({ _id: req.body.postId }).populate(
+        "likes"
+      );
+      let message;
+      if (user && post) {
+        const hasSaved = post.saved.some(
+          (save) => save.user._id.toString() === user._id.toString()
+        );
         if (hasSaved) {
-          post.saved = post.saved.filter((save) => save.user._id.toString() !== user._id.toString());
-          message = 'unsave'
+          post.saved = post.saved.filter(
+            (save) => save.user._id.toString() !== user._id.toString()
+          );
+          message = "unsave";
         } else {
           post.saved.push({ user: user._id });
-          message = "save"
+          message = "save";
         }
-        await post.save()
-        const newPost = await Post.findOne({ _id: post._id }).populate("user")
+        await post.save();
+        const newPost = await Post.findOne({ _id: post._id }).populate("user");
         res.json({
           message: message,
           post: newPost,
-        })
+        });
       } else {
         res.json({
           message:
-              "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
+            "Người dùng không tồn tại, vui lòng đăng nhập để sử dụng dịch vụ !",
         });
       }
     } catch (err) {
@@ -138,5 +150,15 @@ export default class PostController {
     }
   }
 
-
+  static async pagination(req: any, res: any) {
+    const limit = 10;
+    const page = req.params.id;
+    const offset = Math.ceil((page - 1) * limit);
+    const posts = await Post.find()
+      .sort({ createAt: -1 })
+      .limit(limit)
+      .skip(offset)
+      .populate("user");
+    return res.json({ posts: posts });
+  }
 }

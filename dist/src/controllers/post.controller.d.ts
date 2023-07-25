@@ -4,4 +4,5 @@ export default class PostController {
     static getPostDetail(req: any, res: any): Promise<void>;
     static postComment(req: any, res: any): Promise<any>;
     static likeOrUnlike(req: any, res: any): Promise<void>;
+    static savePost(req: any, res: any): Promise<void>;
 }

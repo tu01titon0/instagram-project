@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const user_model_1 = __importDefault(require("../models/schemas/user.model"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const post_model_1 = __importDefault(require("../models/schemas/post.model"));
 class UserController {
     static async createUser(req, res) {
         try {
@@ -99,6 +100,27 @@ class UserController {
             if (user) {
                 const data = user.posts.reverse();
                 res.json({ posts: data, user: user });
+            }
+            else {
+                res.json({ message: "User không tồn tại!" });
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    }
+    static async getPostsSaved(req, res) {
+        try {
+            const user = await user_model_1.default.findOne({ userName: req.params.id });
+            console.log(user);
+            const savedPosts = await post_model_1.default.find({ "saved.user": user._id })
+                .populate("user")
+                .populate("comments.postedBy")
+                .populate("likes.user")
+                .populate("saved.user")
+                .exec();
+            if (user) {
+                res.json({ posts: savedPosts, user: user });
             }
             else {
                 res.json({ message: "User không tồn tại!" });

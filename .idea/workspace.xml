@@ -9,97 +9,19 @@
       <change beforePath="$PROJECT_DIR$/dist/src/controllers/post.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/post.controller.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/post.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/controllers/post.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/post.controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controllers/user.controller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/user.controller.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/controllers/user.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/controllers/user.controller.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/routes/post.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/post.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/routes/post.router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/post.router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/routes/user.routes.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/routes/user.routes.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/color-support" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/color-support" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/compileProtos" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/compileProtos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/crc32" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/crc32" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ejs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/escodegen" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/escodegen" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esgenerate" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/esgenerate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/esparse" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/esvalidate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/firebase" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/firebase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jake" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/jake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jsdoc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/jsdoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json2csv" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/json2csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/livereload" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/livereload" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/markdown-it" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/markdown-it" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/marked" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/marked" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/mime" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/minifyProtoJson" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/minifyProtoJson" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/mkdirp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-pre-gyp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-pre-gyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nopt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/parser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/pbjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/pbjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/pbts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/pbts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/proto-loader-gen-types" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/proto-loader-gen-types" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ps-tree" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ps-tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc-watch" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsc-watch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsserver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-credentials-filter.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-credentials-filter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-credentials-filter.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/call-stream.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/deadline-filter.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/deadline-filter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/deadline-filter.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/server-call.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/server-call.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/server-call.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/server-call.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/build/src/transport.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/node_modules/.bin/proto-loader-gen-types" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/node_modules/.bin/proto-loader-gen-types" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/src/server-call.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/src/server-call.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/src/transport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@grpc/grpc-js/src/transport.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/firebase-admin/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/firebase-admin/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/firebase-tools/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/firebase-tools/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fstream/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fstream/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/pbjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/pbjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/pbts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/pbts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/proto-loader-gen-types" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/google-gax/node_modules/.bin/proto-loader-gen-types" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsdoc/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jsdoc/node_modules/.bin/mkdirp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/dist/browser.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/dist/browser.umd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/helpers/schema/applyWriteConcern.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/helpers/schema/applyWriteConcern.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/ArraySubdocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/ArraySubdocument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/DocumentArray/methods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/DocumentArray/methods/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/array/methods/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/array/methods/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/lib/types/subdocument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/types/inferschematype.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/types/inferschematype.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mongoose/types/query.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mongoose/types/query.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/node_modules/.bin/mkdirp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/teeny-request/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/teeny-request/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tmp/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tmp/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tslib/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tslib/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tslib/tslib.es6.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tslib/tslib.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tslib/tslib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/post.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/post.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/post.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/post.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/post.router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user.routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

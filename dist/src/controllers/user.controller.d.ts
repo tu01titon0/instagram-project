@@ -69,4 +69,5 @@ export default class UserController {
     static getUserInfo(req: any, res: any): Promise<void>;
     static updateUser(req: any, res: any): Promise<import("mongoose").UpdateWriteOpResult>;
     static getPostsFromUser(req: any, res: any): Promise<void>;
+    static getPostsSaved(req: any, res: any): Promise<void>;
 }

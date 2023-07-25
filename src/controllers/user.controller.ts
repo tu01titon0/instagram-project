@@ -118,14 +118,13 @@ export default class UserController {
   static async getPostsSaved(req: any, res: any) {
     try {
       const user = await User.findOne({ userName: req.params.id });
-      console.log(user)
       const savedPosts = await Post.find({ "saved.user": user._id })
-          .populate("user")
-          .populate("comments.postedBy")
-          .populate("likes.user")
-          .populate("saved.user")
-          .exec();
-      if (user ) {
+        .populate("user")
+        .populate("comments.postedBy")
+        .populate("likes.user")
+        .populate("saved.user")
+        .exec();
+      if (user) {
         res.json({ posts: savedPosts, user: user });
       } else {
         res.json({ message: "User không tồn tại!" });

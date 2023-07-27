@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/index.js\""
   },
@@ -43,7 +45,6 @@
     "twbs-pagination": "^1.4.2",
     "validator": "^13.9.0",
     "xlsx": "^0.18.5",
-
     "@types/bcrypt": "^5.0.0",
     "@types/connect-flash": "^0.0.37",
     "@types/connect-livereload": "^0.6.0",
@@ -59,6 +60,5 @@
     "tsc": "^2.0.4",
     "tsc-watch": "^6.0.4",
     "typescript": "^5.1.3"
-
   }
 }

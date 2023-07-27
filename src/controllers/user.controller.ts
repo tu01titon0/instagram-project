@@ -1,6 +1,7 @@
 import User from "../models/schemas/user.model";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import Post from "../models/schemas/post.model";
 
 export default class UserController {
   static async createUser(req: any, res: any) {
@@ -107,6 +108,24 @@ export default class UserController {
       if (user) {
         const data = user.posts.reverse();
         res.json({ posts: data, user: user });
+      } else {
+        res.json({ message: "User không tồn tại!" });
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+  static async getPostsSaved(req: any, res: any) {
+    try {
+      const user = await User.findOne({ userName: req.params.id });
+      const savedPosts = await Post.find({ "saved.user": user._id })
+        .populate("user")
+        .populate("comments.postedBy")
+        .populate("likes.user")
+        .populate("saved.user")
+        .exec();
+      if (user) {
+        res.json({ posts: savedPosts, user: user });
       } else {
         res.json({ message: "User không tồn tại!" });
       }

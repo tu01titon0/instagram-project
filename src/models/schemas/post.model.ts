@@ -20,6 +20,11 @@ const postSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "user",
   },
+  saved: [
+    {
+      user: { type: Schema.Types.ObjectId, ref: "user" },
+    },
+  ],
 });
 
 const Post = model("post", postSchema);

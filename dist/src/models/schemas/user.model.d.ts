@@ -24,13 +24,13 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 declare const User: import("mongoose").Model<{
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {
@@ -43,13 +43,13 @@ declare const User: import("mongoose").Model<{
     fullName?: string;
     password?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {
@@ -62,13 +62,13 @@ declare const User: import("mongoose").Model<{
     fullName?: string;
     password?: string;
 }> & {
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {
@@ -83,13 +83,13 @@ declare const User: import("mongoose").Model<{
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {
@@ -102,13 +102,13 @@ declare const User: import("mongoose").Model<{
     fullName?: string;
     password?: string;
 }, import("mongoose").Document<unknown, {}, {
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {
@@ -121,13 +121,13 @@ declare const User: import("mongoose").Model<{
     fullName?: string;
     password?: string;
 }> & {
+    saved: {
+        post?: import("mongoose").Types.ObjectId;
+    }[];
     avatarUrl: string;
     bio: string;
     gender: string;
     posts: {
-        post?: import("mongoose").Types.ObjectId;
-    }[];
-    saved: {
         post?: import("mongoose").Types.ObjectId;
     }[];
     followers: {

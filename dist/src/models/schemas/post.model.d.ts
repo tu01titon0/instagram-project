@@ -24,49 +24,49 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 declare const Post: import("mongoose").Model<{
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;
     imgUrl?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;
     imgUrl?: string;
 }> & {
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;
@@ -74,49 +74,49 @@ declare const Post: import("mongoose").Model<{
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;
     imgUrl?: string;
 }, import("mongoose").Document<unknown, {}, {
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;
     imgUrl?: string;
 }> & {
-    saved: {
-        user?: import("mongoose").Types.ObjectId;
-    }[];
-    description: string;
     createAt: Date;
+    description: string;
     comments: {
         created: Date;
         comment?: string;
         postedBy?: import("mongoose").Types.ObjectId;
     }[];
     likes: {
+        user?: import("mongoose").Types.ObjectId;
+    }[];
+    saved: {
         user?: import("mongoose").Types.ObjectId;
     }[];
     user?: import("mongoose").Types.ObjectId;

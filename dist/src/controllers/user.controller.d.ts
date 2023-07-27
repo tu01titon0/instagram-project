@@ -25,13 +25,13 @@
 /// <reference types="mongoose/types/inferschematype" />
 export default class UserController {
     static createUser(req: any, res: any): Promise<import("mongoose").Document<unknown, {}, {
+        saved: {
+            post?: import("mongoose").Types.ObjectId;
+        }[];
         avatarUrl: string;
         bio: string;
         gender: string;
         posts: {
-            post?: import("mongoose").Types.ObjectId;
-        }[];
-        saved: {
             post?: import("mongoose").Types.ObjectId;
         }[];
         followers: {
@@ -44,13 +44,13 @@ export default class UserController {
         fullName?: string;
         password?: string;
     }> & {
+        saved: {
+            post?: import("mongoose").Types.ObjectId;
+        }[];
         avatarUrl: string;
         bio: string;
         gender: string;
         posts: {
-            post?: import("mongoose").Types.ObjectId;
-        }[];
-        saved: {
             post?: import("mongoose").Types.ObjectId;
         }[];
         followers: {

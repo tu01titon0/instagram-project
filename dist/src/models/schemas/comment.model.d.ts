@@ -24,42 +24,42 @@
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from "mongoose";
 declare const Comment: import("mongoose").Model<{
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 }, {}, {}, {}, import("mongoose").Document<unknown, {}, {
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 }> & {
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
 }, Schema<any, import("mongoose").Model<any, any, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, {
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 }, import("mongoose").Document<unknown, {}, {
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 }> & {
+    createAt: Date;
     from: {
         user?: import("mongoose").Types.ObjectId;
     }[];
-    createAt: Date;
     content?: string;
 } & {
     _id: import("mongoose").Types.ObjectId;
